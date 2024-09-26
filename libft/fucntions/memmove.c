@@ -12,19 +12,31 @@
 
 #include <stdio.h>
 
-void *ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned int i;
-    unsigned char *d = (unsigned char *)dest;
-    const unsigned char *s = (const unsigned char *)src;
+	size_t		i;
+	char		*pd;
+	const char	*ps;
 
-    i = 0;
-    while (i < n)
-    {
-        d[i] = s[i];
-        i++;
-    }
-    return dest;
+	if (!dest || !src)
+		return (NULL);
+	pd = (char *)dest;
+	ps = (const char *)src;
+	i = 0;
+	if (pd > ps)
+	{
+		while (n-- > 0)
+			pd[n] = ps[n];
+	}
+	else
+	{
+		while (i < n)
+		{
+			pd[i] = ps[i];
+			i++;
+		}
+	}
+	return (dest);
 }
 
 int main(void)
