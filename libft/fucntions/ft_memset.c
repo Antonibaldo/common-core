@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:24:17 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/25 18:33:30 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/25 17:19:26 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:24:50 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
-void ft_bzero(void *s, size_t n)
+#include <unistd.h>
+#include "libft.h"
+void* ft_memset(void* ptr, int value, size_t num)
 {
 	size_t i;
-	unsigned char* sa;
+	unsigned char* p;
 		
-	sa = (unsigned char*) s;
+	p = (unsigned char*) ptr;
 	i = 0;
-	while (i < n)
+	while (i < num)
 	{
-		sa[i] = 0;
+		p[i] = (unsigned char) value;
 		i++;
 	}
 }
@@ -28,8 +29,8 @@ void ft_bzero(void *s, size_t n)
 int main(void)
 {
 	char str[10];
-	ft_bzero(str, 5);
-	for (int i = 0; i < 5; i++)
+	ft_memset(str, 0, 10);
+	for (int i = 0; i < 10; i++)
 	{
 		printf("%d ", str[i]);
 	}

@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:26 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/25 17:45:21 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/24 18:17:14 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:21:50 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <unistd.h>
-
-void* memset(void* ptr, int value, size_t num)
+#include "libft.h"
+int	ft_isprint(int c)
 {
-	size_t i;
-	unsigned char* p;
-		
-	p = (unsigned char*) ptr;
-	i = 0;
-	while (i < num)
+	if (c == '\0')
 	{
-		p[i] = (unsigned char) value;
-		i++;
+		return (0);
 	}
+	if (!(c >= 32 && c <= 126))
+		return (0);
+	return (1);
 }
 
 int main(void)
 {
-	char str[10];
-	memset(str, 0, 10);
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d ", str[i]);
-	}
-    return 0;
+	char c = '\a';
+	if (ft_isprint(c))
+		printf("%s", "tu madre");
+	else
+		printf("%s", "tu padre");
+
+	return(0);
 }

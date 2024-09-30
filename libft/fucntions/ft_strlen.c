@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 17:43:24 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/24 18:00:16 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/24 18:31:59 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:28:16 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	is_digit(int c)
+size_t ft_strlen(const char *str)
 {
-	if (c == '\0')
+	int	i;
+
+	i = 0;
+	while (*str != '\0')
 	{
-		return (0);
+		i++;
+		str++;
 	}
-	if (!((c >= 'A' && c <= 'Z')
-			|| (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')))
-		return (0);
-	return (1);
+	return (i);
+
 }
 
 int main(void)
 {
-	char c = '-';
-	if (is_digit(c))
-		printf("%s", "tu madre");
-	else
-		printf("%s", "tu padre");
+	char str[] = "Hola, muhrtgjndo!";
+	int a = ft_strlen(str);
+	printf("%d", a);
 
 	return(0);
 }
+

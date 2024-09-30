@@ -6,11 +6,11 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:49:15 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/30 20:13:42 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:22:28 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
+#include "libft.h"
 void *ft_memchr(const void *s, int c, size_t n)
 {
 	int i;

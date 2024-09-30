@@ -6,12 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 20:29:35 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/30 20:50:12 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:22:55 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 #include <stdio.h>
-
+#include "libft.h"
 int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	int	i;

@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 18:01:57 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/24 18:16:47 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/24 19:02:55 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:31:17 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	is_digit(int c)
+int ft_toupper(int ch)
 {
-	if (c == '\0')
-	{
-		return (0);
-	}
-	if (!(c >= 0  && c <= 127))
-		return (0);
-	return (1);
+        if (ch >= 'a' && ch <= 'z')
+        {
+                return(ch - ('a' - 'A'));
+        }
+        return(ch);
 }
 
 int main(void)
 {
-	char c = '1';
-	if (is_digit(c))
-		printf("%s", "tu madre");
-	else
-		printf("%s", "tu padre");
+        char str = 'G';
+        char a = ft_toupper(str);
+        printf("%c", a);
 
-	return(0);
+        return(0);
 }
-
-

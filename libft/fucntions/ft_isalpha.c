@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 15:22:36 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/23 19:19:59 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:16:20 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	is_alpha(int c)
+int	ft_isalpha(int c)
 {
 	if (c == '\0')
 	{
@@ -29,7 +30,7 @@ int	is_alpha(int c)
 int main(void)
 {
 	char c = 'g';
-	if (is_alpha(c))
+	if (ft_isalpha(c))
 		printf("%s", "tu madre");
 	else
 		printf("%s", "tu padre");

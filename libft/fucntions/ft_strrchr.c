@@ -6,10 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:05:07 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/26 18:18:41 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:29:51 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include "libft.h"
+
 int	ft_strlen(const char *str)
 {
 	int	i;

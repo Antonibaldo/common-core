@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:08:44 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/25 18:18:59 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:23:26 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
+#include "libft.h"
 void *ft_memcpy(void *dest, const void *src, unsigned int n)
 {
     unsigned int i;

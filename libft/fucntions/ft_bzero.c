@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 19:03:28 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/24 19:07:34 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/25 18:24:17 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:14:57 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-#include <unistd.h>
-
-int tolower(int ch)
+#include "libft.h"
+void ft_bzero(void *s, size_t n)
 {
-        if (ch >= 'A' && ch <= 'Z')
-        {
-                return(ch + ('a'-'A'));
-        }
-        return(ch);
+	size_t i;
+	unsigned char* sa;
+		
+	sa = (unsigned char*) s;
+	i = 0;
+	while (i < n)
+	{
+		sa[i] = 0;
+		i++;
+	}
 }
 
 int main(void)
 {
-        char str = 'Y';
-        char a = tolower(str);
-        printf("%c", a);
-
-        return(0);
+	char str[10];
+	ft_bzero(str, 5);
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d ", str[i]);
+	}
+    return 0;
 }

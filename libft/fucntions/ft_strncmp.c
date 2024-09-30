@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 18:22:04 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/09/26 18:25:29 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/09/30 17:39:52 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/09/30 22:28:45 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t  n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 
@@ -29,9 +29,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t  n)
 
 int main(void)
 {
-        char    s1[]= "AB";
-        char    s2[]= "ABC";
-        unsigned int n = 3;
+        char    s1[]= "ABC";
+        char    s2[]= "ABCC";
+        unsigned int n = 4;
 	int i;
         i = ft_strncmp(s1, s2, n);
         printf("%i", i);
