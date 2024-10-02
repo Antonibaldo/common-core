@@ -6,23 +6,10 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 23:14:51 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:24:11 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 21:26:28 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "libft.h"
-void ft_bzero(void *s, size_t n)
-{
-	size_t i;
-	unsigned char* sa;
-
-	sa = (unsigned char*) s;
-	i = 0;
-	while (i < n)
-	{
-		sa[i] = 0;
-		i++;
-	}
-}
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

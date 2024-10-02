@@ -6,10 +6,11 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 17:43:24 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:25:19 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 21:22:26 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if (c == '\0')

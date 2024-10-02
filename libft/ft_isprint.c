@@ -6,10 +6,11 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:17:14 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:27:39 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:37:31 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c == '\0')

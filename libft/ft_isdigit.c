@@ -6,10 +6,11 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 19:29:44 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:27:10 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:37:14 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 int	ft_isdigit(int c)
 {
 	if (c == '\0')

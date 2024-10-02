@@ -6,12 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:31:59 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:33:55 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:57:21 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -22,7 +22,6 @@ size_t ft_strlen(const char *str)
 		str++;
 	}
 	return (i);
-
 }
 /*
 int main(void)

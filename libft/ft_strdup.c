@@ -6,26 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 23:37:34 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:32:14 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 21:35:24 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include "libft.h"
+#include "libft.h"
 
-size_t ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-	return (i);
-
-}
-
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*copy;
 	size_t	length;
@@ -44,7 +30,7 @@ char *ft_strdup(const char *s)
 		i++;
 	}
 	copy[i] = '\0';
-	return (copy);	
+	return (copy);
 }
 /*
 int main(void)

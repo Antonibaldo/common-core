@@ -6,40 +6,25 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:05:07 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 18:16:59 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 20:00:36 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
-int	ft_strlen(const char *str)
+
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (*str != '\0')
+	i = ft_strlen(s);
+	if (!s && !c)
+		return (NULL);
+	while (i >= 0)
 	{
-		i++;
-		str++;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	return (i);
-
-}
-*/
-char *ft_strrchr(const char *s, int c)
-{
-    int i;
-
-    i = ft_strlen(s);
-    if (!s && !c)
-                return (NULL);
-        while (i >= 0)
-        {
-                if (s[i] == (char)c)
-                        return ((char *)s + i);
-                i--;
-        }
-
-    return NULL;
+	return (NULL);
 }
 /*
 int main(void)
