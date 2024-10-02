@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 17:30:42 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/01 17:30:56 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 18:11:21 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,13 +17,14 @@ char *ft_strchr(const char *s, int c)
     i = 0;
     if (!s && !c)
 		return (NULL);
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
-	}
-    
+    while (s[i])
+    {
+	    if (s[i] == (char)c)
+		    return ((char *)s + i);
+	    i++;
+    }
+    if (s[i] == (char)c)
+		return ((char *)s + i);
     return NULL;
 }
 /*
@@ -36,7 +37,6 @@ int main(void)
 
     if (result != NULL) {
         printf("Se encontró el carácter: %c\n", *result);
-        printf("Subcadena a partir del carácter encontrado: %s\n", result);
     } else {
         printf("No se encontró el carácter.\n");
     }
