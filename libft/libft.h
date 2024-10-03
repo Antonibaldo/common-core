@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:50:09 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/02 21:28:19 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:55:10 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -37,4 +37,8 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
+void				ft_putstr_fd(char *s, int fd);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 #endif

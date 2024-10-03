@@ -6,7 +6,7 @@
 #    By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 17:38:19 by abaldo-m          #+#    #+#              #
-#    Updated: 2024/10/01 21:51:50 by abaldo-m         ###   ########.fr        #
+#    Updated: 2024/10/03 18:09:52 by abaldo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,11 @@
 		ft_memcmp.c \
 		ft_calloc.c \
 		ft_strdup.c \
-	  
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+
 # Los Archivos "librerias" .o
 OBJ = ${SRC:.c=.o}
 
