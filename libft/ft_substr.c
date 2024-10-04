@@ -6,34 +6,28 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 08:39:19 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 10:40:58 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 17:42:11 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	
-	int strlen;
-	int i;
-	char *substr;
+	size_t		str_len;
+	char		*substr;
 
-	i = 0;
-	strlen = ft_strlen(s);
-	substr = malloc(len + 1);
-	if (!*s || !substr)
+	if (s == NULL)
 		return (NULL);
-	if (strlen <= start)
-		substr[i] = '\0';
-	if (len > strlen - start)
-		len = strlen - start;
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	str_len = ft_strlen(s);
+	if (start >= str_len)
+		return (ft_strdup(""));
+	if (len > str_len - start)
+		len = str_len - start;
+	substr = (char *)malloc(len + 1);
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);	
 }
 /*
 #include <stdio.h>
@@ -46,7 +40,7 @@ int main(void)
     char *resultado;
 
     resultado = ft_substr(original, 6, 5);
-    printf("Subcadena: %s\n", resultado);  // Salida: "mundo"
+    printf("Subcadena: %s\n", resultado);
     free(resultado);
 
     return 0;

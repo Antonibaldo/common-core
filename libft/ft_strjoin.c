@@ -6,23 +6,21 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:41:23 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 11:08:18 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 17:03:05 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-	int str1len;
-	int str2len;
 	char *strjoin;
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
 	strjoin = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!*s1 || !*s2 || !strjoin)
+	if (!strjoin)
 		return (NULL);
 	while (s1[i])
 	{
