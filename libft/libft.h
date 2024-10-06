@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:50:09 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 16:46:13 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/06 21:03:31 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -46,4 +46,5 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+char				*ft_itoa(int n);
 #endif

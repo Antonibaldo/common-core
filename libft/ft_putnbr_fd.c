@@ -6,14 +6,14 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:36:04 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/03 18:23:04 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/06 21:08:10 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int num;
+	unsigned int	num;
 
 	num = n;
 	if (n < 0)
