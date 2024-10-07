@@ -6,12 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 15:54:32 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 16:36:16 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:52:41 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	str_len;
 	unsigned int	i;

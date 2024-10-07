@@ -6,12 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 08:39:19 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 17:42:11 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:54:57 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		str_len;
 	char		*substr;
@@ -27,7 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (NULL);
 	ft_strlcpy(substr, s + start, len + 1);
-	return (substr);	
+	return (substr);
 }
 /*
 #include <stdio.h>

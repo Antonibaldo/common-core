@@ -6,14 +6,14 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:41:23 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 17:03:05 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:56:51 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *strjoin;
+	char			*strjoin;
 	unsigned int	i;
 	unsigned int	j;
 
@@ -37,7 +37,6 @@ char *ft_strjoin(char const *s1, char const *s2)
 	}
 	strjoin[j] = '\0';
 	return (strjoin);
-
 }
 /*
 #include <stdio.h>

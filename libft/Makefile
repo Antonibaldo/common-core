@@ -6,9 +6,10 @@
 #    By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 17:38:19 by abaldo-m          #+#    #+#              #
-#    Updated: 2024/10/06 21:02:43 by abaldo-m         ###   ########.fr        #
+#    Updated: 2024/10/07 20:06:17 by abaldo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 # Las Flags para compilar
 	FLAG = -Wall -Wextra -Werror
 # El nombre del "Programa"
@@ -47,6 +48,7 @@
 		ft_strmapi.c \
 		ft_striteri.c \
 		ft_itoa.c \
+		ft_split.c \
 
 # Los Archivos "librerias" .o
 OBJ = ${SRC:.c=.o}

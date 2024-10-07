@@ -6,23 +6,23 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:14:21 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/06 21:38:40 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 21:10:23 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 static void	ft_fillnum(char *str, unsigned int num, int length, int n)
 {
-    if (n == 0)
-    {
-        str[0] = '0';
-        return;
-    }
-    while (num > 0)
-    {
-        str[--length] = (num % 10) + '0';
-        num /= 10;
-    }
+	if (n == 0)
+	{
+		str[0] = '0';
+		return ;
+	}
+	while (num > 0)
+	{
+		str[--length] = (num % 10) + '0';
+		num /= 10;
+	}
 }
 
 int	is_neg(int num)
@@ -38,7 +38,7 @@ int	ft_itoalen(int num)
 	n = num;
 	lenght = 0;
 	if (n == 0)
-        	return 1;
+		return (1);
 	while (n)
 	{
 		n /= 10;
@@ -51,23 +51,23 @@ int	ft_itoalen(int num)
 
 char	*ft_itoa(int n)
 {
-	int	length;
-	char	*str;
 	unsigned int	num;
-	
+	int				length;
+	char			*str;
+
 	length = ft_itoalen(n);
-    	str = (char *)malloc(length + 1);
-    	if (!str)
-        	return NULL;
-    	str[length] = '\0';
-    	if (is_neg(n))
-        	num = -n;
-    	else
-        	num = n;
-    	ft_fillnum(str, num, length, n);
-    	if (is_neg(n))
-        	str[0] = '-';
-    	return str;
+	str = (char *)malloc(length + 1);
+	if (!str)
+		return (NULL);
+	str[length] = '\0';
+	if (is_neg(n))
+		num = -n;
+	else
+		num = n;
+	ft_fillnum(str, num, length, n);
+	if (is_neg(n))
+		str[0] = '-';
+	return (str);
 }
 /*
 int	main(void)

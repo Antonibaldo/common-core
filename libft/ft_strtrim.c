@@ -6,12 +6,12 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 11:07:26 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/04 12:21:48 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:59:39 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int is_in_set(char c, const char *set)
+static int	is_in_set(char c, const char *set)
 {
 	size_t	i;
 
@@ -24,12 +24,13 @@ static int is_in_set(char c, const char *set)
 	}
 	return (0);
 }
-char *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *str;
-	int i;
-	int j;
-	int k;
+	char	*str;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	k = 0;
@@ -50,7 +51,7 @@ char *ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	str[k] = '\0';
-	return(str);
+	return (str);
 }
 /*
 #include <stdio.h>

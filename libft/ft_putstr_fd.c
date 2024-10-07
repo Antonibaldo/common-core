@@ -6,14 +6,14 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:12:18 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/03 17:21:11 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:42:55 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
