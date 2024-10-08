@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:14:21 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/07 21:10:23 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:04:29 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -25,12 +25,12 @@ static void	ft_fillnum(char *str, unsigned int num, int length, int n)
 	}
 }
 
-int	is_neg(int num)
+static int	is_neg(int num)
 {
 	return (num < 0);
 }
 
-int	ft_itoalen(int num)
+static int	ft_itoalen(int num)
 {
 	int	lenght;
 	int	n;
