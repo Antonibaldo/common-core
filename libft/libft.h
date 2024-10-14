@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:50:09 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/07 20:53:52 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:50:35 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -23,7 +23,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 size_t				ft_strlen(const char *str);
 unsigned int		ft_strlcpy(char *dest, const char *src, size_t size);
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int		ft_strlcat(char *dest, const char *src, unsigned int size);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_tolower(int c);

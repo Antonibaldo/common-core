@@ -6,37 +6,27 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:41:23 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/07 20:56:51 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:42:04 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*strjoin;
-	unsigned int	i;
-	unsigned int	j;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*new_string;
 
-	i = 0;
-	j = 0;
-	strjoin = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!strjoin)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	while (s1[i])
-	{
-		strjoin[j] = s1[i];
-		j++;
-		i++;
-	}
-	i = 0;
-	while (s2[i])
-	{
-		strjoin[j] = s2[i];
-		i++;
-		j++;
-	}
-	strjoin[j] = '\0';
-	return (strjoin);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	new_string = malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (new_string == NULL)
+		return (NULL);
+	ft_strlcpy(new_string, s1, (s1_len + 1));
+	ft_strlcat(new_string, s2, (s1_len + s2_len + 1));
+	return (new_string);
 }
 /*
 #include <stdio.h>

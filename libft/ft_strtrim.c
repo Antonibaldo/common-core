@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 11:07:26 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/07 20:59:39 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:39:25 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -34,9 +34,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	k = 0;
-	j = ft_strlen(s1);
 	if (!s1 || !set)
 		return (NULL);
+	j = ft_strlen(s1);
 	while (s1[i] && is_in_set(s1[i], set))
 		i++;
 	while (j > i && is_in_set(s1[j - 1], set))
@@ -60,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int main(void)
 {
-    char *s1 = "sseeHolaseseses";
+    char *s1 = NULL;
     char *set = "es";
     char *resultado;
 
