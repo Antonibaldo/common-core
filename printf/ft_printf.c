@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:31:26 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/23 18:28:59 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:23:37 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,18 @@ static int	format(const char format, va_list args)
 
 int	ft_printf(char const *str, ...)
 {
-	va_list	args;
-	int len;
-	int i;
+	va_list		args;
+	int			len;
+	int			i;
 
 	len = 0;
 	i = 0;
 	va_start(args, str);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] != '%')
 			len += ft_putchar(str[i]);
-		else 
+		else
 		{
 			i++;
 			if (str[i] != '\0')

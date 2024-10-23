@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:27:55 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/23 18:24:10 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:26:00 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
 int	ft_puthex(unsigned long long num);
-int     ft_puthex_cap(unsigned long long num);
+int	ft_puthex_cap(unsigned long long num);
 int	ft_putptr(void *s);
 int	ft_putstr(char *str);
 int	ft_printf(char const *str, ...);

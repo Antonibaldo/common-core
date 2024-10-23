@@ -6,7 +6,7 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:30:25 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/23 18:19:23 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:24:22 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	ft_putstr(char *str)
 			i++;
 		}
 	}
-	else 
+	else
 	{
 		ft_putstr("(null)");
 		return (6);
 	}
-	return(i);
+	return (i);
 }
