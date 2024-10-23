@@ -6,7 +6,7 @@
 #    By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 17:19:11 by abaldo-m          #+#    #+#              #
-#    Updated: 2024/10/22 18:48:43 by abaldo-m         ###   ########.fr        #
+#    Updated: 2024/10/23 18:25:01 by abaldo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 # El nombre del "Programa"
         NAME = libftprintf.a
 # Los Archivos "librerias" .c
-        SRC = ft_putchar.c\
+        SRC = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_unsig.c ft_puthex.c ft_puthex_cap.c ft_putptr.c ft_printf.c
 
 # Los Archivos "librerias" .o
 OBJ = ${SRC:.c=.o}

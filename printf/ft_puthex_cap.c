@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_puthex_cap.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 17:27:55 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/23 18:24:10 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/10/23 17:24:25 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/10/23 17:27:01 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-# include <stdarg.h>
+int     ft_puthex_cap(unsigned long long num)
+{
+        int             len;
+        char    hex_digit;
 
-int	ft_putchar(char c);
-int	ft_putnbr(int n);
-int	ft_puthex(unsigned long long num);
-int     ft_puthex_cap(unsigned long long num);
-int	ft_putptr(void *s);
-int	ft_putstr(char *str);
-int	ft_printf(char const *str, ...);
-int	ft_putnbr_unsig(unsigned int n);
-
-#endif
+        len = 0;
+        hex_digit = "0123456789ABCDEF"[num % 16];
+        if (num >= 16)
+                len += ft_puthex_cap(num / 16);
+        len += ft_putchar(hex_digit);
+        return (len);
+}

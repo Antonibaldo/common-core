@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 17:27:55 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/10/23 18:24:10 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/10/23 15:30:25 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/10/23 18:19:23 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putstr(char *str)
+{
+	int	i;
 
-int	ft_putchar(char c);
-int	ft_putnbr(int n);
-int	ft_puthex(unsigned long long num);
-int     ft_puthex_cap(unsigned long long num);
-int	ft_putptr(void *s);
-int	ft_putstr(char *str);
-int	ft_printf(char const *str, ...);
-int	ft_putnbr_unsig(unsigned int n);
-
-#endif
+	i = 0;
+	if (str)
+	{
+		while (str[i] != '\0')
+		{
+			write(1, &str[i], 1);
+			i++;
+		}
+	}
+	else 
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
+	return(i);
+}
