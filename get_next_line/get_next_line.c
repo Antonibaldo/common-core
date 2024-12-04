@@ -6,15 +6,22 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 17:40:23 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/11/21 18:30:08 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/12/04 18:58:39 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+char    *ft_free(char **str)
+{
+        free(*str);
+        *str = NULL;
+        return (NULL);
+}
+
 char	*fill_chunk(fd, left)
 {
-	int		bytes_read;
+	ssize_t		bytes_read;
 	char	*buf;
 
 	bytes_read = 1;
@@ -34,7 +41,7 @@ char	*fill_chunk(fd, left)
 	free(buf);
 	if (bytes_read == -1)
 		return (ft_free(&left));
-	return (left_c);read
+	return (left);
 }
 
 char	*fill_line(left)
