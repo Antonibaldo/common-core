@@ -6,20 +6,20 @@
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 17:40:23 by abaldo-m          #+#    #+#             */
-/*   Updated: 2024/12/04 18:58:39 by abaldo-m         ###   ########.fr       */
+/*   Updated: 2024/12/04 19:25:55 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char    *ft_free(char **str)
+static char    *ft_free(char **str)
 {
         free(*str);
         *str = NULL;
         return (NULL);
 }
 
-char	*fill_chunk(fd, left)
+static char	*fill_chunk(fd, left)
 {
 	ssize_t		bytes_read;
 	char	*buf;
@@ -44,7 +44,7 @@ char	*fill_chunk(fd, left)
 	return (left);
 }
 
-char	*fill_line(left)
+static char	*fill_line(left)
 {
 	char	*line;
 	char	*con;
@@ -58,7 +58,7 @@ char	*fill_line(left)
 	return (line);
 }
 
-char	*fill_left(left)
+static char	*fill_left(left)
 {
 	char	*con;
 	char	*left_c
