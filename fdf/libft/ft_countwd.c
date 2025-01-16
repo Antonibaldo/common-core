@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_countwd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 16:42:33 by abaldo-m          #+#    #+#             */
-/*   Updated: 2025/01/13 20:01:55 by abaldo-m         ###   ########.fr       */
+/*   Created: 2025/01/16 17:10:01 by abaldo-m          #+#    #+#             */
+/*   Updated: 2025/01/16 17:10:25 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
-
-# include "minilibx/mlx.h"
-# include "libft/libft.h"
-# include <math.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
-
-typedef struct
+int	ft_countwd(char const *str, char c)
 {
-    int width;
-    int height;
-    int **z_matrix;
+	int i;
+	int words;
 
-    void    *mlx_ptr;
-    void    *win_ptr;
-}           fdf;
-
-void    read_file(char *file_name, fdf *data);
-
-#endif
+	words = 0;
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] == c && str[i] != '\0')
+			i++;
+		if (str[i])
+			words++;
+		while (str[i] != c && str[i] != '\0')
+			i++;
+	}
+	return (words);
+}
