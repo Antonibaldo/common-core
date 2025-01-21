@@ -15,21 +15,32 @@
 int get_height(char *file_name)
 {
     char *line;
-    int height = 0; // Inicializar a 0
+    int height = 0;
     int fd;
 
-    fd = open(file_name, O_RDONLY, 0);
+    // Abrir archivo
+    fd = open(file_name, O_RDONLY);
     if (fd < 0)
-        return (-1); // Manejar error de apertura de archivo
-    line = get_next_line(fd);
-    while (line != NULL)
+    {
+        perror("Error opening file");
+        return -1;
+    }
+
+    // Leer línea por línea
+    while ((line = get_next_line(fd)) != NULL)
     {
         height++;
         free(line);
-        line = get_next_line(fd); // Leer la siguiente línea
     }
-    close(fd);
-    return(height);
+
+    // Cerrar archivo
+    if (close(fd) < 0)
+    {
+        perror("Error closing file");
+        return -1;
+    }
+
+    return height;
 }
 
 int get_width(char *file_name)
@@ -39,13 +50,11 @@ int get_width(char *file_name)
     char *line;
 
     fd = open(file_name, O_RDONLY, 0);
-    if (fd < 0)
-        return (-1); // Manejar error de apertura de archivo
     line = get_next_line(fd);
     if (line)
     {
         width = ft_countwd(line, ' ');
-        free(line); // Liberar memoria
+        free(line);
     }
     close(fd);
     return (width);
@@ -75,7 +84,10 @@ void    read_file(char *file_name, fdf *data)
     char *line;
 
     data->height = get_height(file_name);
+    printf("Height: %d\n", data->height);
     data->width = get_width(file_name);
+    printf("Width: %d\n", data->width);
+
     data->z_matrix = (int **)malloc(sizeof(int*) * (data->height + 1));
     i = 0;
     while (i <= data->height)
@@ -83,13 +95,15 @@ void    read_file(char *file_name, fdf *data)
     fd = open(file_name, O_RDONLY, 0);
     i = 0;
     line = get_next_line(fd);
-	while (line != NULL)
+	line = get_next_line(fd);
+    while (line != NULL)
     {
         fill_matrix(data->z_matrix[i], line);
         free(line);
         i++;
+        line = get_next_line(fd); 
     }
+
     close(fd);
     data->z_matrix[i] = NULL; 
 }
-

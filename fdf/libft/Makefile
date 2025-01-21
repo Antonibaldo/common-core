@@ -1,6 +1,6 @@
 NAME=libft.a
 
-SRCS=*.c printf/*.c
+SRCS=*.c printf/*.c get_next_line/*.c
 
 OBJECTS=*.o
 

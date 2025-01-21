@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaldo-m <abaldo-m@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 16:42:33 by abaldo-m          #+#    #+#             */
-/*   Updated: 2025/01/13 20:01:55 by abaldo-m         ###   ########.fr       */
+/*   Created: 2024/11/21 17:34:51 by abaldo-m          #+#    #+#             */
+/*   Updated: 2024/12/19 17:53:03 by abaldo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include "minilibx-linux/mlx.h"
-# include "libft/libft.h"
-# include <math.h>
-# include <fcntl.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5 
+# endif
+
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdio.h>
-# include <string.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <limits.h>
 
-typedef struct
-{
-    int width;
-    int height;
-    int **z_matrix;
+size_t	ft_strlen(char *s);
+char	*ft_free(char **str);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strchr(char *s, int c);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*get_next_line(int fd);
 
-    void    *mlx_ptr;
-    void    *win_ptr;
-}           fdf;
-
-void    read_file(char *file_name, fdf *data);
 #endif

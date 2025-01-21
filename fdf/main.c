@@ -12,46 +12,32 @@
 
 #include "fdf.h"
 
+int deal_key(int key, void *data)
+{
+    ft_printf("%d", key);
+    return(0);
+}
+
 int main(int argc, char **argv)
 {
     fdf *data;
-    int i, j;
 
     data = (fdf *)malloc(sizeof(fdf));
-    if (!data)
-        return (1); // Manejo de error en la asignación de memoria
+    read_file(argv[1], data);
+    
+    int i;
+    int j;
 
-    if (argc == 2)
+    i = 0;
+    while (i < data->height)
     {
-        read_file(argv[1], data);
-
-        // Imprimir la matriz
-        i = 0;
-        while (i < data->height)
+        j = 0; 
+        while (j < data->width)
         {
-            j = 0; // Inicializar `j` antes de cada iteración de fila
-            while (j < data->width)
-            {
-                ft_printf("%3d", data->z_matrix[i][j]); // Imprime cada elemento
-                j++;
-            }
-            ft_printf("\n"); // Salto de línea después de cada fila
-            i++;
+            printf("%d ", data->z_matrix[i][j]); 
+            j++;
         }
-
-        // Liberar memoria
-        i = 0;
-        while (i < data->height)
-            free(data->z_matrix[i++]); // Liberar cada fila
-        free(data->z_matrix);         // Liberar la matriz
-        free(data);                   // Liberar la estructura principal
+        ft_printf("\n");
+        i++;
     }
-    else
-    {
-        ft_printf("Error: Invalid number of arguments\n");
-        free(data); // Liberar `data` si se asignó
-        return (1);
-    }
-
-    return (0);
 }

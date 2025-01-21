@@ -10,19 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
+size_t ft_strlen(const char *str)
 {
-	int	i;
+    size_t len = 0;
 
-	i = 0;
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-	return (i);
+    if (!str)
+        return (0);
+
+    while (str[len])
+        len++;
+    return (len);
 }
+
 /*
 int main(void)
 {
